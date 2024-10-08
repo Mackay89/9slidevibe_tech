@@ -1,0 +1,8 @@
+{
+   "_id": ObjectId,
+   "name": "Product 1",
+   "description": "A great product",
+   "price": 29.99,
+   "image_url": "/images/product1.jpg"
+}
+

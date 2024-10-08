@@ -1,0 +1,15 @@
+{
+   "_id": ObjectId,
+   "user_id": ObjectId,
+   "items": [
+       {
+           "product_id": ObjectId,
+           "quantity": 2
+       },
+       {
+           "product_id": ObjectId,
+           "quantity": 1
+       }
+   ]
+}
+

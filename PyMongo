@@ -1,0 +1,69 @@
+from pymongo import MongoClient
+
+# Establish a connection to the MongoDB server
+client = MongoClient('mongodb://localhost:27017/')
+
+# Select the database
+db = client['ecommerce_db']
+
+# Insert a product
+def insert_product(name, description, price, image_url):
+    product = {
+        "name": name,
+        "description": description,
+        "price": price,
+        "image_url": image_url
+    }
+    db.products.insert_one(product)
+    print("Product inserted:", product)
+
+# Insert a user
+def insert_user(name, email, shipping_address):
+    user = {
+        "name": name,
+        "email": email,
+        "shipping_address": shipping_address
+    }
+    db.users.insert_one(user)
+    print("User inserted:", user)
+
+# Insert an order
+def insert_order(user_id, items, shipping_address, total_price):
+    order = {
+        "user_id": user_id,
+        "items": items,
+        "shipping_address": shipping_address,
+        "status": "Processing",
+        "total_price": total_price
+    }
+    db.orders.insert_one(order)
+    print("Order inserted:", order)
+
+# Insert a contact form submission
+def insert_contact(name, email, message):
+    contact = {
+        "name": name,
+        "email": email,
+        "message": message
+    }
+    db.contacts.insert_one(contact)
+    print("Contact inserted:", contact)
+
+# Example usage:
+if __name__ == "__main__":
+    # Inserting a new product
+    insert_product("Product 1", "A great product", 29.99, "/images/product1.jpg")
+    
+    # Inserting a user
+    shipping_info = {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip_code": "2000",
+        "country": "SA"
+    }
+    insert_user("khaya Manoto", "9slidevibe_tech.co.za", shipping_info)
+    
+    # Inserting a contact form
+    insert_contact("John Doe", "9slidevibe_tech.co.za", "I have a question about my order.")
+

@@ -1,0 +1,13 @@
+{
+   "_id": ObjectId,
+   "name": "Khaya Manoto",
+   "email": "9slidevibe_tech@example.com",
+   "shipping_address": {
+       "street": "123 Main St",
+       "city": "johanesburg",
+       "state": "south africa",
+       "zip_code": "2000",
+       "country": "USA"
+   }
+}
+
