@@ -1,1 +1,0 @@
-9slidevibe_tech
