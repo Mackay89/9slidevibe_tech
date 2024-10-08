@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9slidevibe_tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to 9slidevibe_tech</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showSection('home')" aria-label="Go to Home section">Home</a></li>
+                <li><a href="#products" onclick="showSection('products')" aria-label="Go to Products section">Products</a></li>
+                <li><a href="#shipping" onclick="showSection('shipping')" aria-label="Go to Shipping section">Shipping</a></li>
+                <li><a href="#payment" onclick="showSection('payment')" aria-label="Go to Payment section">Payment</a></li>
+                <li><a href="#contact" onclick="showSection('contact')" aria-label="Go to Contact section">Contact</a></li>
+                <li><a href="#tracking" onclick="showSection('tracking')" aria-label="Go to Track Order section">Track Order</a></li>
+            </ul>
+        </nav>
+        <button class="menu-button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Home</h2>
+            <div class="section-content">
+                <p>Welcome to 9slidevibe_tech. Explore our amazing products!</p>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="https://t3.ftcdn.net/jpg/01/25/01/30/360_F_125013001_X2pxg9BdJJNz3ZE4oW7rofGPOSpjgUt3.jpg" alt="A variety of store products" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://m-cdn.phonearena.com/images/hub/114-wide-two_1200/Black-Friday-phone-deals-recap.jpg" alt="Black Friday phone deals" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://i.pcmag.com/imagery/articles/07vs1XUD5VRURTCNkjChNHm-1.fit_lim.v1700829752.jpg" alt="Latest gadgets showcasing" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://m-cdn.phonearena.com/images/article/128170-wide-two_1600/Best-Black-Friday-2021-wireless-headphones-deals-expectations.jpg?1626266483" alt="Wireless headphones on sale" loading="lazy">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://assets1.ignimgs.com/2019/11/30/blogroll-headphones-1575082853545_160w.jpg?width=1280" alt="Various headphones" loading="lazy">
+                    </div>
+                </div>
+                <div class="slideshow-controls">
+                    <button onclick="plusSlides(-1)" aria-label="Previous slide">❮</button>
+                    <button onclick="plusSlides(1)" aria-label="Next slide">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="hidden">
+            <h2>Products</h2>
+            <div class="section-content">
+                <div class="product">
+                    <h3>HP Pavilion Laptop 15</h3>
+                    <img src="https://www.bhphotovideo.com/images/images2500x2500/hp_5yh29ua_aba_pavilion_laptop_15_cs2010nr_core_1473122.jpg" alt="HP Pavilion Laptop 15" loading="lazy">
+                    <p>The HP Pavilion Laptop 15 is powered by an Intel Core processor, featuring a vibrant 15.6" display. Perfect for work and play!</p>
+                    <button onclick="addToCart('HP Pavilion Laptop 15')" aria-label="Add HP Pavilion Laptop 15 to cart">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Wireless Headphones</h3>
+                    <img src="https://www.bhphotovideo.com/images/images2500x2500/beats_by_dr_dre_900_00109_01_studio_wireless_headphones_red_1016369.jpg" alt="Wireless Headphones" loading="lazy">
+                    <p>Experience immersive sound with these wireless headphones featuring noise cancellation and a comfortable fit.</p>
+                    <button onclick="addToCart('Wireless Headphones')" aria-label="Add Wireless Headphones to cart">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Samsung Freestyle Projector</h3>
+                    <img src="https://spy.com/wp-content/uploads/2022/03/Samsung-Freestyle-Review-15-of-15.jpg?resize=300" alt="Samsung Freestyle Projector" loading="lazy">
+                    <p>The Samsung Freestyle is a portable projector that brings your favorite content to life, wherever you are.</p>
+                    <button onclick="addToCart('Samsung Freestyle Projector')" aria-label="Add Samsung Freestyle Projector to cart">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Tech Gadget</h3>
+                    <img src="https://3.bp.blogspot.com/-fVbBq-wXBag/WpjxatXevkI/AAAAAAAAAwg/sMLPiBhz9FMrDyJTTl-mB_z4zO59zHLHgCEwYBhgL/s1600/Tech-Gadget-1.jpg" alt="Tech Gadget" loading="lazy">
+                    <p>Discover the latest tech gadget that will enhance your productivity and entertainment experiences.</p>
+                    <button onclick="addToCart('Tech Gadget')" aria-label="Add Tech Gadget to cart">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Portable Charger</h3>
+                    <img src="https://i5.walmartimages.com/asr/e5dcafd0-e032-497a-b8ff-adaa01cb9b75.867a2c71db7e9b53100eff2a47e2e49e.jpeg" alt="Portable Charger" loading="lazy">
+                    <p>Stay powered up on the go with this lightweight portable charger, compatible with all major devices.</p>
+                    <button onclick="addToCart('Portable Charger')" aria-label="Add Portable Charger to cart">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <h3>Bluetooth Speaker</h3>
+                    <img src="https://i5.walmartimages.com/asr/31d23744-3a9f-4bc6-88cd-bda390bab17e.9b9212a7dd5d6be8175ff3645610dce4.jpeg" alt="Bluetooth Speaker" loading="lazy">
+                    <p>This compact Bluetooth speaker delivers powerful sound and is perfect for outdoor gatherings.</p>
+                    <button onclick="addToCart('Bluetooth Speaker')" aria-label="Add Bluetooth Speaker to cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping Section -->
+        <section id="shipping" class="hidden">
+            <h2>Shipping Information</h2>
+            <form id="shippingForm" onsubmit="redirectToPayment(event)">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="hidden">
+            <h2>Payment Information</h2>
+            <form id="payment-form" role="form" onsubmit="submitPayment(event)">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required pattern="\d{16}" maxlength="16" aria-label="Your Credit Card Number"><br><br>
+
+                <label for="expiration-date">Expiration Date (MM/YY):</label>
+                <input type="text" id="expiration-date" name="expiration-date" required pattern="\d{2}/\d{2}" maxlength="5" aria-label="Card Expiration Date"><br><br>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required pattern="\d{3}" maxlength="3" aria-label="Card CVV"><br><br>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitContactForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Track Order Section -->
+        <section id="tracking" class="hidden">
+            <h2>Track Your Order</h2>
+            <form id="trackingForm" onsubmit="trackOrder(event)">
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" name="orderId" required>
+
+                <button type="submit">Track Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 9slidevibe_tech. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show a specific section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        // Function to toggle mobile menu (not implemented)
+        function toggleMenu() {
+            // Add mobile menu toggle logic here
+        }
+
+        // Function to handle adding items to cart (dummy implementation)
+        function addToCart(product) {
+            alert(product + ' has been added to your cart!');
+        }
+
+        // Function to handle form submission for shipping
+        function redirectToPayment(event) {
+            event.preventDefault();
+            alert("Shipping information submitted. Redirecting to payment...");
+            showSection('payment');
+        }
+
+        // Function to handle payment submission
+        function submitPayment(event) {
+            event.preventDefault();
+            alert("Payment submitted successfully!");
+        }
+
+        // Function to handle contact form submission
+        function submitContactForm(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+        }
+
+        // Function to handle order tracking
+        function trackOrder(event) {
+            event.preventDefault();
+            alert("Tracking information for Order ID: " + document.getElementById('orderId').value);
+        }
+    </script>
+</body>
+
+</html>
