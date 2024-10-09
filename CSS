@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #007bff;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Styles */
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+/* Section Styles */
+.section-content {
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Products Section */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #218838;
+}
+
+/* Cart Styles */
+#cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #007bff;
+    color: white;
+    position: relative;
+}
+
+/* Home Section Background */
+#home {
+    background-image: url('https://wallpaperaccess.com/full/2677233.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: white; /* Adjust text color for better visibility */
+    padding: 50px; /* Add padding for better spacing */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .nav-links li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
