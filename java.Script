@@ -1,0 +1,66 @@
+// Function to toggle the navigation menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
+
+// Function to show the corresponding section when a link is clicked
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.classList.remove('hidden');
+        } else {
+            section.classList.add('hidden');
+        }
+    });
+}
+
+// Handling form submissions for shipping and contact forms
+document.getElementById('shipping-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    const name = document.getElementById('full-name').value;
+    const address = document.getElementById('address').value;
+    const city = document.getElementById('city').value;
+    const postalCode = document.getElementById('postal-code').value;
+    const country = document.getElementById('country').value;
+    
+    // Show a confirmation message (you can update this to send data to a server)
+    const confirmationMessage = `
+        Shipping Details:
+        Name: ${name}
+        Address: ${address}, ${city}, ${postalCode}, ${country}
+    `;
+    document.getElementById('shipping-confirmation').textContent = confirmationMessage;
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Show a response message (you can update this to send data to a server)
+    document.getElementById('contact-response').textContent = `Thank you for your message, ${name}. We'll get back to you at ${email}.`;
+});
+
+// Dummy function to simulate payment process
+function proceedToPayment() {
+    const cart = document.getElementById('cart');
+    if (cart.textContent.includes('No items in cart')) {
+        alert('Your cart is empty!');
+    } else {
+        alert('Proceeding to payment...');
+        // Simulate payment process or redirect to payment gateway
+    }
+}
+
+// Track order functionality
+document.getElementById('track-order-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const orderNumber = document.getElementById('order-number').value;
+    
+    // Mock order tracking result (update this to fetch actual tracking info)
+    document.getElementById('tracking-results').textContent = `Order ${orderNumber} is in transit.`;
+});
+
