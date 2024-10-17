@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +14,7 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-
     <header>
         <div class="header-top">
             <div class="logo">
@@ -34,7 +31,7 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home" aria-current="page" onclick="showSection('home')">Home</a></li>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
                 <li><a href="#products" onclick="showSection('products')">Products</a></li>
                 <li><a href="#deals" onclick="showSection('deals')">Deals</a></li>
                 <li><a href="#testimonials" onclick="showSection('testimonials')">Testimonials</a></li>
@@ -55,20 +52,22 @@
             </div>
         </section>
 
-        <!-- Featured Deals Section -->
+        <!-- Deals Section -->
         <section id="deals" class="section hidden">
             <h2>Today's Top Deals</h2>
             <div class="deals-grid">
+                <!-- Deal 1 -->
                 <div class="deal-card">
-                    <img src="https://example.com/deal1.jpg" alt="Deal 1" loading="lazy">
+                    <img src="https://example.com/deal1.jpg" alt="Deal 1">
                     <h3>50% Off Wireless Headphones</h3>
-                    <p>High-quality sound and comfort for all-day use. Now at $99!</p>
+                    <p>High-quality sound and comfort. Now $99!</p>
                     <button onclick="addToCart('Wireless Headphones', 99)">Add to Cart</button>
                 </div>
+                <!-- Deal 2 -->
                 <div class="deal-card">
-                    <img src="https://example.com/deal2.jpg" alt="Deal 2" loading="lazy">
+                    <img src="https://example.com/deal2.jpg" alt="Deal 2">
                     <h3>Save $200 on Laptops</h3>
-                    <p>Latest models with powerful processors and sleek designs. From $799.</p>
+                    <p>Powerful and sleek, from $799.</p>
                     <button onclick="addToCart('Laptop', 799)">Add to Cart</button>
                 </div>
             </div>
@@ -76,110 +75,35 @@
 
         <!-- Products Section -->
         <section id="products" class="section hidden">
-            <h2>Browse Our Products</h2>
+            <h2>Our Products</h2>
             <div class="filter-bar">
                 <label for="sort-products">Sort by:</label>
                 <select id="sort-products" onchange="sortProducts()">
                     <option value="popularity">Popularity</option>
                     <option value="price-low-high">Price: Low to High</option>
                     <option value="price-high-low">Price: High to Low</option>
-                    <option value="rating">Customer Rating</option>
                 </select>
             </div>
             <div class="product-grid">
+                <!-- Example Product -->
                 <div class="product-card" data-name="HP Pavilion 15 Laptop">
-                    <img src="https://www.bhphotovideo.com/images/images2500x2500/hp_5yh29ua_aba_pavilion_laptop_15_cs2010nr_core_1473122.jpg"
-                        alt="HP Pavilion 15-inch Laptop" loading="lazy">
-                    <h3>HP Pavilion 15" Laptop</h3>
+                    <img src="https://www.bhphotovideo.com/images/images2500x2500/hp_5yh29ua_aba_pavilion_laptop_15_cs2010nr_core_1473122.jpg" alt="HP Pavilion 15 Laptop">
+                    <h3>HP Pavilion 15 Laptop</h3>
                     <p>$999</p>
-                    <div class="rating">
-                        <span>⭐⭐⭐⭐☆ (200 reviews)</span>
-                    </div>
+                    <div class="rating">⭐⭐⭐⭐☆ (200 reviews)</div>
                     <button onclick="addToCart('HP Pavilion 15 Laptop', 999)">Add to Cart</button>
                 </div>
-                <!-- More products can be added dynamically -->
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="section hidden">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"9Slidevibe_tech has the best deals on laptops. Fast shipping too!"</p>
-                    <span>- John D.</span>
-                </div>
-                <div class="testimonial">
-                    <p>"I love the wireless headphones I bought. Great sound quality!"</p>
-                    <span>- Sarah L.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section hidden">
-            <h2>Contact Us</h2>
-            <form id="contact-form" onsubmit="sendContact(event)">
-                <label for="contact-name">Your Name</label>
-                <input type="text" id="contact-name" name="contact-name" required aria-label="Your Name">
-                <label for="contact-email">Your Email</label>
-                <input type="email" id="contact-email" name="contact-email" required aria-label="Your Email">
-                <label for="contact-message">Your Message</label>
-                <textarea id="contact-message" name="contact-message" required aria-label="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-                <div class="submission-feedback" aria-live="polite"></div>
-            </form>
-        </section>
-
-        <!-- Track Order Section -->
-        <section id="tracking" class="section hidden">
-            <h2>Track Your Order</h2>
-            <form id="tracking-form" onsubmit="trackOrder(event)">
-                <label for="tracking-number">Tracking Number</label>
-                <input type="text" id="tracking-number" name="tracking-number" required aria-label="Tracking Number">
-                <button type="submit">Track Order</button>
-                <div class="submission-feedback" aria-live="polite"></div>
-            </form>
-        </section>
-
-        <!-- Login/Signup Section -->
-        <section id="login-signup" class="section hidden centered">
-            <h2>Login / Signup</h2>
-            <div class="login-signup-form">
-                <form id="login-form" onsubmit="submitLogin(event)">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="login-email" required>
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" name="login-password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <div class="signup-section">
-                    <p>Don't have an account? <a href="#" onclick="toggleSignup()">Sign up</a></p>
-                </div>
-            </div>
-        </section>
+        <!-- Other sections (e.g. Contact, Testimonials, etc.) -->
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-                <li><a href="#shipping">Shipping & Returns</a></li>
-                <li><a href="#support">Support</a></li>
-            </ul>
-        </div>
-        <div class="footer-socials">
-            <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>&copy; 2024 9Slidevibe_tech. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2024 9Slidevibe_tech. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/app.js"></script>
 </body>
-
 </html>
 
